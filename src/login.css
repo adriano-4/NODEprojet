@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: white;
+}
+#container {
+  width: 500px;
+  height: 450px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.173);
+}
+#container .logo1 {
+  width: 150px;
+  height: auto;
+  position: relative;
+  bottom: 10px;
+}
+#container .bienvenue {
+  font-size: 25px;
+}
+#container .formulaire .loginp {
+  width: 350px;
+  height: 40px;
+  margin: 10px;
+  color: white;
+
+  padding-left: 15px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.353);
+  transition: all 0.2s;
+}
+#container .formulaire .loginp:focus {
+  outline: none;
+  border-bottom: 1px solid white;
+}
+#container .formulaire .btnco {
+  margin: 60px;
+  width: 150px;
+  height: 40px;
+  font-size: 14px;
+  border: 1px solid rgb(245, 79, 245);
+  background: transparent;
+  border-radius: 5px;
+  color: rgb(245, 79, 245);
+  cursor: pointer;
+}

@@ -1,0 +1,19 @@
+.flou {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: black;
+}
+.centre {
+  width: 600px;
+  height: 500px;
+  border: 1px solid black;
+  border-radius: 10px;
+}

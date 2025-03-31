@@ -1,0 +1,82 @@
+.container {
+  width: 94vw;
+  height: 600px;
+  position: relative;
+  top: 60px;
+  display: flex;
+}
+
+.container .cont {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: black;
+}
+.container .cont .cont11 {
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  padding-left: 10px;
+  color: rgb(0, 0, 72);
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: space-between;
+  
+}
+.container .cont .cont11 .droite{
+  position: relative;
+  right: 10px;
+}
+.container .cont .cont11 .droite input {
+  width: 300px;
+  height: 35px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.088);
+  border: none;
+  padding-left: 15px;
+  transition: all 0.3s;
+  color: black;
+  font-size: 15px;
+}
+.container .cont .cont11 .droite input:focus {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.14);
+}
+.container .cont .cont11 .droite button{
+  border-radius: 20px;
+  background-color: rgb(0, 128, 0);
+}
+.tableau{
+  width: 100%;
+  height: 85%;
+  position: absolute;
+  bottom: 0;
+}
+.tableau table {
+  width: 100%;
+  font-size: 14px;
+  border-collapse: collapse;
+}
+.tableau table tr{
+  height:45px;
+  color: rgba(0, 0, 0, 0.484);
+}
+.tableau table tr th{
+  border-bottom: 2px solid black;
+
+}
+.tableau table tr td{
+  color: black;
+  border-bottom: 1px solid black;
+  font-size: 14px;
+  font-weight: 600;
+}
+.tableau table tr td button{
+  border-radius: 20px;
+  background-color: rgb(0, 128, 0);
+  font-size: 12px;
+}
