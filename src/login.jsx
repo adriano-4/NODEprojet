@@ -6,9 +6,8 @@ import "./login.css";
 function Login() {
   return (
     <>
-  <Fond/>
       <div id="container">
-        <h2 class="bienvenue" >Bienvenue</h2>
+        <h2 class="bienvenue">Bienvenue</h2>
         <img src={logo1} class="logo1" alt="logo1" />
         <div className="formulaire">
           <form action="">

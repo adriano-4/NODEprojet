@@ -4,16 +4,83 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(10px);
   z-index: 100;
   position: absolute;
   top: 0;
   left: 0;
-  color: black;
+  color: rgb(0, 0, 0);
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.216);
 }
 .centre {
   width: 600px;
   height: 500px;
-  border: 1px solid black;
-  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.259);
+  border-radius: 20px;
+  background-color: white;
+}
+
+.centre h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 60px;
+  margin-top: 30px;
+  font-weight: 600;
+
+}
+
+input[type="text"] {
+  width: 65%;
+  padding: 12px 15px;
+  margin: -10px 0;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+  transition: border-color 0.3s;
+  position: relative;
+  left: 95px;
+  border: none;
+  background-color: #00000008;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-bottom: 1px solid blueviolet;
+}
+
+input[type="button"] {
+  width: 30%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 20px;
+}
+input[type="text"]:not(:last-child) {
+  margin-bottom: 10px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.button{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.button .annuler{
+  background-color: rgba(0, 0, 0, 0.064);
+  color: rgb(0, 0, 46);
+
+}
+.button .annuler:hover{
+  background-color: rgba(0, 0, 0, 0.123);
+}
+.button .ajouter:hover{
+  background-color: #0068d7;
 }

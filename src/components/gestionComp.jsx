@@ -51,7 +51,7 @@ function GestionComp({ activeContainer }) {
           <div className="droite">
             <input type="text" placeholder="Recherche ..." />
             <button>
-              Ajouter <i className="fa fa-plus"></i>
+              <i className="fa fa-plus"></i> <span>Ajouter</span>
             </button>
           </div>
         </div>
@@ -84,10 +84,14 @@ function GestionComp({ activeContainer }) {
                       : "Redoublant"}
                   </td>
                   <td>
-                    <button>Modifier</button>
+                    <button className="modifier">
+                      <i className="fa fa-edit"></i>
+                    </button>
                   </td>
                   <td>
-                    <button>supprimer</button>
+                    <button className="supprimer">
+                      <i className="fa fa-trash"></i>
+                    </button>
                   </td>
                 </tr>
               ))}

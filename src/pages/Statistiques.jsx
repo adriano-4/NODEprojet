@@ -1,11 +1,11 @@
 import NavBar from "../components/navBar";
-import Fond from "../components/fond";
+import StatComp from "../components/statComp";
 
 function Statistiques() {
   return (
     <div>
-      <Fond />
       <NavBar />
+      <StatComp />
     </div>
   );
 }

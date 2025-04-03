@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 60px;
   padding: 10px 20px;
   display: flex;
   align-items: center;
@@ -14,11 +14,11 @@
 .navbar__logo img {
   width: 180px;
   position: relative;
-  top: 20px;
+  top: 10px;
   left: 20px;
 }
 .navbar__links {
-  top: 15px;
+  top: 5px;
   position: relative;
   right: 100px;
   display: flex;
@@ -36,7 +36,7 @@
 .deco {
   position:relative;
   right: 70px;
-  top: 10px;
+  top: 0px;
   background-color: transparent;
   border-radius: 20px;
   padding: 0;
@@ -48,8 +48,15 @@
   gap: 7px;
   transition: all 0.3s;
   color: rgb(255, 255, 255);
-  font-size: 14px;
-  background-color: blue;
+  font-size: 13px;
+ background-color: #9b9b9b;
+}
+.deco:focus{
+  outline: none;
+}
+.deco:hover{
+  border: none;
+  background-color: #7c7c7c;
 }
 .deco p{
   white-space: nowrap;

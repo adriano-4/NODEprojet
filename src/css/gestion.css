@@ -25,15 +25,16 @@
   color: rgb(0, 0, 72);
   font-family: Arial, Helvetica, sans-serif;
   justify-content: space-between;
-  
 }
-.container .cont .cont11 .droite{
+.container .cont .cont11 .droite {
   position: relative;
-  right: 10px;
+  right: 20px;
+  display: flex;
+  flex-direction: row;
 }
 .container .cont .cont11 .droite input {
   width: 300px;
-  height: 35px;
+  height: 15px;
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.088);
   border: none;
@@ -41,16 +42,44 @@
   transition: all 0.3s;
   color: black;
   font-size: 15px;
+  position: relative;
+  left: -10px;
+  top: 10px;
 }
 .container .cont .cont11 .droite input:focus {
   outline: none;
   background-color: rgba(0, 0, 0, 0.14);
 }
-.container .cont .cont11 .droite button{
-  border-radius: 20px;
+.container .cont .cont11 .droite button {
+  border-radius: 50%;
   background-color: rgb(0, 128, 0);
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  align-items: center;
 }
-.tableau{
+.container .cont .cont11 .droite button:focus{
+  outline: none;
+} 
+.container .cont .cont11 .droite button i{
+  font-size: 14px;
+  position: relative;
+  top: 1px;
+}
+.container .cont .cont11 .droite button span{
+  font-size: 13px;
+  position: relative;
+  left: 15px;
+}
+.container .cont .cont11 .droite button:hover{
+  width: 100px;
+  border-radius: 20px;
+}
+.tableau {
   width: 100%;
   height: 85%;
   position: absolute;
@@ -61,22 +90,34 @@
   font-size: 14px;
   border-collapse: collapse;
 }
-.tableau table tr{
-  height:45px;
+.tableau table tr {
+  height: 45px;
   color: rgba(0, 0, 0, 0.484);
 }
-.tableau table tr th{
-  border-bottom: 2px solid black;
-
+.tableau table tr th {
+  border-bottom: 1px solid rgb(0, 0, 0);
 }
-.tableau table tr td{
+.tableau table tr td {
   color: black;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.337);
   font-size: 14px;
   font-weight: 600;
 }
-.tableau table tr td button{
+.tableau table tr td button {
   border-radius: 20px;
-  background-color: rgb(0, 128, 0);
+  width: 40px;
   font-size: 12px;
+}
+.tableau table tr td button:focus{
+  outline: none;
+}
+.tableau table tr td .modifier{
+  background-color: #007bff;
+  position: relative;
+  left: 20px;
+}
+.tableau table tr td .supprimer{
+  background-color: #c50000;
+  position: relative;
+  right: 10px;
 }

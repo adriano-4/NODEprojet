@@ -1,11 +1,11 @@
 import NavBar from "../components/navBar";
-import Fond from "../components/fond";
+import NavBarResultat from "../components/navBarResultat";
 
 function Evaluations() {
   return (
     <div>
-      <Fond />
       <NavBar />
+      <NavBarResultat />
     </div>
   );
 }

@@ -14,7 +14,11 @@ function AjoutEt() {
           <br />
           <input type="text" placeholder="adresse email" />
           <br />
-          <input type="button" value="Ajouter"/>
+          <div className="button">
+          <input className="annuler" type="button" value="Annuler" />
+          <input className="ajouter" type="button" value="Ajouter" />
+
+          </div>
         </form>
       </div>
     </div>

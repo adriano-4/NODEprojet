@@ -12,7 +12,7 @@ function Etudiants() {
       <NavBar />
       <NavBarGestion setActiveContainer={setActiveContainer} />{" "}
       <GestionComp activeContainer={activeContainer} />
-      <AjoutEt />
+      {/* <AjoutEt /> */}
     </div>
   );
 }
