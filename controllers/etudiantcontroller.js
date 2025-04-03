@@ -11,15 +11,16 @@ exports.getAllEtudiants = async (req, res) => {
 
 exports.getEtudiantById = async (req, res) => {
   try {
-    const { num_et, nom_et, prenom_et } = req.query;
+    const { queryParam } = req.query; 
 
-    if (!num_et && !nom_et && !prenom_et) {
+    if (!queryParam) {
       return res.status(400).json({
-        message: "Au moins un des champs 'nom_et' ou 'prenom_et' est requis",
+        message:
+          "Le paramètre de recherche (num_et, nom_et ou prenom_et) est requis",
       });
     }
 
-    const result = await Etudiant.recherche(num_et,nom_et, prenom_et);
+    const result = await Etudiant.recherche(queryParam);
 
     if (result.length > 0) {
       res.status(200).json(result);
@@ -30,6 +31,7 @@ exports.getEtudiantById = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
 
 
 exports.createEtudiant = async (req, res) => {

@@ -10,24 +10,15 @@ class Etudiant {
     });
   }
 
-  static async recherche(num_et, nom_et, prenom_et) {
+  static async recherche(queryParam) {
     return new Promise((resolve, reject) => {
-      let query = "SELECT * FROM etudiant WHERE 1=1";
+      let query = "SELECT * FROM etudiant WHERE 1=1"; // On commence avec une condition toujours vraie
       let params = [];
 
-      if (num_et) {
-        query += " AND num_et LIKE ?";
-        params.push(`%${num_et}%`);
-      }
-
-      if (nom_et) {
-        query += " AND nom_et LIKE ?";
-        params.push(`%${nom_et}%`);
-      }
-
-      if (prenom_et) {
-        query += " AND prenom_et LIKE ?";
-        params.push(`%${prenom_et}%`);
+      if (queryParam) {
+        query += " AND (num_et LIKE ? OR nom_et LIKE ? OR prenom_et LIKE ?)";
+        const searchTerm = `%${queryParam}%`; // Ajoute les % pour faire une recherche "contient"
+        params.push(searchTerm, searchTerm, searchTerm); // Cherche dans num_et, nom_et, prenom_et
       }
 
       db.query(query, params, (err, results) => {
