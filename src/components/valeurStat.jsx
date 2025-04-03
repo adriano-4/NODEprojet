@@ -1,10 +1,11 @@
+// ValeurStat.jsx
 import "../css/statistique.css";
 
-function ValeurStat() {
+function ValeurStat({ titre, valeur }) {
   return (
     <div className="val">
-      <h2 className="descri">Moyenne de la classe</h2>
-      <p className="valeur">12.50</p>
+      <h2 className="descri">{titre}</h2>
+      <p className="valeur">{valeur}</p>
     </div>
   );
 }

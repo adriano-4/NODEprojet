@@ -1,0 +1,29 @@
+#centre{
+    height: 150px;
+    width: 400px;
+}
+#centre h2{
+    font-size: 16px;
+}
+#centre .button{
+    display: flex;
+    position: relative;
+    bottom: 30px;
+}
+#centre .button button{
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+#centre .button button:focus{
+    outline: none;
+}
+#centre .button .oui{
+    background-color: #c50000;
+    color: white;
+}
+#centre .button .non{
+    background-color: rgba(0, 0, 0, 0.51);
+    color: white;
+}

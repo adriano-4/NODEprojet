@@ -1,7 +1,7 @@
 /* App.css */
 .navbar {
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
@@ -23,6 +23,7 @@
   right: 100px;
   display: flex;
   align-items: center;
+  transition: all 0.3s;
 }
 .navbar__links ul {
   list-style: none;
@@ -32,9 +33,12 @@
 
 .navbar__links li {
   margin-left: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .deco {
-  position:relative;
+  position: relative;
   right: 70px;
   top: 0px;
   background-color: transparent;
@@ -49,16 +53,16 @@
   transition: all 0.3s;
   color: rgb(255, 255, 255);
   font-size: 13px;
- background-color: #9b9b9b;
+  background-color: #9b9b9b;
 }
-.deco:focus{
+.deco:focus {
   outline: none;
 }
-.deco:hover{
+.deco:hover {
   border: none;
   background-color: #7c7c7c;
 }
-.deco p{
+.deco p {
   white-space: nowrap;
   position: relative;
   bottom: 2.5px;
@@ -94,4 +98,27 @@
     cursor: pointer;
     color: white;
   }
+}
+#rond {
+  width: 10px;
+  height: 10px;
+  background: blue;
+  border-radius: 50%;
+  transition: all 0.3s;
+  display: none;
+  animation: rond 0.5s;
+}
+@keyframes rond {
+  from {
+    scale: 0.2;
+    transform: translateY(10px);
+  }
+  to {
+    scale: 1;
+    transform: translateY(0);
+  }
+}
+.navbar__links ul li.active #rond {
+  display: block;
+  transition: all 0.3s;
 }

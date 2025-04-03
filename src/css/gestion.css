@@ -52,7 +52,7 @@
 }
 .container .cont .cont11 .droite button {
   border-radius: 50%;
-  background-color: rgb(0, 128, 0);
+  background-color: rgb(55, 0, 255);
   position: relative;
   width: 40px;
   height: 40px;
@@ -60,24 +60,32 @@
   transition: all 0.3s;
   display: flex;
   align-items: center;
-  align-items: center;
+  color: white;
+  overflow: hidden;
 }
-.container .cont .cont11 .droite button:focus{
+.container .cont .cont11 .droite button:focus {
   outline: none;
-} 
-.container .cont .cont11 .droite button i{
+}
+.container .cont .cont11 .droite button i {
   font-size: 14px;
   position: relative;
   top: 1px;
 }
-.container .cont .cont11 .droite button span{
+.container .cont .cont11 .droite button span {
   font-size: 13px;
   position: relative;
   left: 15px;
 }
-.container .cont .cont11 .droite button:hover{
+.container .cont .cont11 .droite button:hover {
   width: 100px;
   border-radius: 20px;
+}
+#errorrecherche {
+  color: red;
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  top: 5px;
 }
 .tableau {
   width: 100%;
@@ -89,6 +97,7 @@
   width: 100%;
   font-size: 14px;
   border-collapse: collapse;
+  transition: all 0.3s;
 }
 .tableau table tr {
   height: 45px;
@@ -102,22 +111,50 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.337);
   font-size: 14px;
   font-weight: 600;
+  transition: all 0.3s;
 }
 .tableau table tr td button {
   border-radius: 20px;
-  width: 40px;
+  width: 35px;
+  height: 35px;
   font-size: 12px;
 }
-.tableau table tr td button:focus{
+.tableau table tr td button:hover{
+  border: none;
   outline: none;
 }
-.tableau table tr td .modifier{
-  background-color: #007bff;
-  position: relative;
-  left: 20px;
+.tableau table tr td button:focus {
+  outline: none;
+  border: none;
 }
-.tableau table tr td .supprimer{
-  background-color: #c50000;
+.tableau table tr td .modifier {
+  background-color: transparent;
+  color: rgb(0, 197, 53);
   position: relative;
+  font-size: 16px;
+}
+.tableau table tr td .supprimer {
+  background-color: transparent;
+  color: rgb(255, 0, 0);
+  position: relative;
+  font-size: 16px;
   right: 10px;
+}
+#aj,
+#ann {
+  transition: all 0.3s;
+  margin-left: 10px;
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+}
+#inpmod {
+  width: 180px;
+  height: 8px;
+  transform: translateX(-80px);
+  background-color: transparent;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.088);
+  border-radius: 5px;
+  transition: all 0.3s;
 }

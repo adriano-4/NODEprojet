@@ -2,15 +2,20 @@ import { useState } from "react";
 import "../css/navBar.css";
 import "font-awesome/css/font-awesome.min.css";
 import logo1 from "../assets/logo1.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+
+  const getLinkClass = (path) => {
+    return location.pathname === path ? "active" : "";
+  };
   return (
     <nav className="navbar">
       <div className="navbar__logo">
@@ -18,17 +23,21 @@ function NavBar() {
       </div>
       <div className={`navbar__links ${isMenuOpen ? "open" : ""}`}>
         <ul>
-          <li>
+          <li className={getLinkClass("/")}>
             <Link to="/">Acceuil</Link>
+            <div id="rond"></div>
           </li>
-          <li>
+          <li className={getLinkClass("/etudiants")}>
             <Link to="/etudiants">Gestion</Link>
+            <div id="rond"></div>
           </li>
-          <li>
+          <li className={getLinkClass("/evaluations")}>
             <Link to="/evaluations">Resultats</Link>
+            <div id="rond"></div>
           </li>
-          <li>
+          <li className={getLinkClass("/statistiques")}>
             <Link to="/statistiques">Statistiques</Link>
+            <div id="rond"></div>
           </li>
         </ul>
       </div>
