@@ -247,7 +247,7 @@ function GestionComp({
                     <td>
                       <button
                         id="info"
-                        onClick={() => handleShowInfo(etudiant.id_et)}
+                        onClick={() => handleShowInfo(etudiant)}
                       >
                         <i className="fa fa-info"></i>
                       </button>

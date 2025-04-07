@@ -25,9 +25,10 @@ function Etudiants() {
     setShowModal(false);
   };
 
-  const handleShowInfo = (etudiantId) => {
-    setEtudiantInfo(etudiantId);
+  const handleShowInfo = (etudiant) => {
+    setEtudiantInfo(etudiant);
     setShowModal2(true);
+    console.log(etudiant);
   };
 
   const handleHideInfo = () => {
@@ -54,7 +55,9 @@ function Etudiants() {
     <div>
       <NavBar />
       <NavBarGestion setActiveContainer={setActiveContainer} />
-      {showModal2 && <Info_note />}
+      {showModal2 && (
+        <Info_note fermerinfo={handleHideInfo} etudiant={etudiantInfo} />
+      )}
       <GestionComp
         activeContainer={activeContainer}
         handleShowSuppEt={handleShowSuppEt}

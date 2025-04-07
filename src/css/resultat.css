@@ -161,7 +161,7 @@
   background-color: rgba(0, 0, 0, 0.216);
 }
 .container3 .cont {
-  width: 400px;
+  width: 450px;
   height: 500px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.259);
   border-radius: 20px;
@@ -188,7 +188,7 @@
 }
 .tableau2{
     width: 100%;
-    height: 80%;
+    height: 70%;
     display: flex;
     justify-content: center;
 }
@@ -197,6 +197,7 @@
     height: 90%;
     position: relative;
     top: 30px;
+    border-collapse: collapse;
 }
 .tableau2 table tr {
   height: 45px;
@@ -211,4 +212,26 @@
   font-size: 14px;
   font-weight: 600;
   transition: all 0.3s;
+}
+#fermer{
+    position: relative;
+    left: 195px;
+    top: 7px;
+    background-color: transparent;
+    color: black;
+    border: none;
+}
+#fermer:hover{
+    outline: none;
+    border: none;
+}
+#fermer:focus{
+    outline: none;
+    border: none;
+}
+#modifier{
+  background-color: transparent;
+  color: rgb(0, 197, 53);
+  position: relative;
+  font-size: 16px;
 }
