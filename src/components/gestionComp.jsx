@@ -3,7 +3,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { debounce } from "lodash";
 
-function GestionComp({ activeContainer, handleShowSuppEt, setShowAjoutEt }) {
+function GestionComp({
+  activeContainer,
+  handleShowSuppEt,
+  setShowAjoutEt,
+  handleShowInfo,
+}) {
   const [etudiants, setEtudiants] = useState([]);
   const [matieres, setMatieres] = useState([]);
   const [moyennes, setMoyennes] = useState({});
@@ -154,6 +159,7 @@ function GestionComp({ activeContainer, handleShowSuppEt, setShowAjoutEt }) {
                   <th>Adresse Mail</th>
                   <th>Moyenne</th>
                   <th>Observation</th>
+                  <th>Info</th>
                   <th colSpan={3}>Action</th>
                 </tr>
               </thead>
@@ -237,6 +243,14 @@ function GestionComp({ activeContainer, handleShowSuppEt, setShowAjoutEt }) {
                         : moyennes[etudiant.id_et] >= 10
                         ? "Admis"
                         : "Redoublant"}
+                    </td>
+                    <td>
+                      <button
+                        id="info"
+                        onClick={() => handleShowInfo(etudiant.id_et)}
+                      >
+                        <i className="fa fa-info"></i>
+                      </button>
                     </td>
                     <td id="btnmod">
                       {editingEtudiant?.id_et === etudiant.id_et ? (

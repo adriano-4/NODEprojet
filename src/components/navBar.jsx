@@ -31,10 +31,10 @@ function NavBar() {
             <Link to="/etudiants">Gestion</Link>
             <div id="rond"></div>
           </li>
-          <li className={getLinkClass("/evaluations")}>
+          {/* <li className={getLinkClass("/evaluations")}>
             <Link to="/evaluations">Resultats</Link>
             <div id="rond"></div>
-          </li>
+          </li> */}
           <li className={getLinkClass("/statistiques")}>
             <Link to="/statistiques">Statistiques</Link>
             <div id="rond"></div>

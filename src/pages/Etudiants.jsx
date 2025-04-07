@@ -5,6 +5,7 @@ import GestionComp from "../components/gestionComp";
 import AjoutEt from "../components/ajoutEt";
 import SuppEt from "../components/suppEt";
 import axios from "axios";
+import Info_note from "../components/info_note";
 
 function Etudiants() {
   const [activeContainer, setActiveContainer] = useState("etudiant");
@@ -12,6 +13,8 @@ function Etudiants() {
   const [showModal, setShowModal] = useState(false);
   const [showAjoutEt, setShowAjoutEt] = useState(false);
   const [etudiantASupprimer, setEtudiantASupprimer] = useState(null);
+  const [etudiantInfo, setEtudiantInfo] = useState(null);
+  const [showModal2, setShowModal2] = useState(false);
 
   const handleShowSuppEt = (etudiantId) => {
     setEtudiantASupprimer(etudiantId);
@@ -20,6 +23,15 @@ function Etudiants() {
 
   const handleHideSuppEt = () => {
     setShowModal(false);
+  };
+
+  const handleShowInfo = (etudiantId) => {
+    setEtudiantInfo(etudiantId);
+    setShowModal2(true);
+  };
+
+  const handleHideInfo = () => {
+    setShowModal2(false);
   };
 
   const handleConfirmerSuppression = () => {
@@ -42,10 +54,12 @@ function Etudiants() {
     <div>
       <NavBar />
       <NavBarGestion setActiveContainer={setActiveContainer} />
+      {showModal2 && <Info_note />}
       <GestionComp
         activeContainer={activeContainer}
         handleShowSuppEt={handleShowSuppEt}
         setShowAjoutEt={setShowAjoutEt}
+        handleShowInfo={handleShowInfo}
       />
       {showAjoutEt && <AjoutEt setShowAjoutEt={setShowAjoutEt} />}
       {showModal && (
