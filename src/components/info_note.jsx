@@ -42,6 +42,7 @@ function Info_note({ fermerinfo, etudiant }) {
           </span>
         </div>
         <div className="tableau2">
+
           <table>
             <thead>
               <tr>
@@ -54,7 +55,7 @@ function Info_note({ fermerinfo, etudiant }) {
               {notes.map((note) => (
                 <tr key={note.id_et}>
                   <td>{note.design}</td>
-                  <td>{note.note}</td>
+                  <td>{note.note ? note.note : "Aucune note"}</td>
                   <td>
                     <button
                       id="modifier"
