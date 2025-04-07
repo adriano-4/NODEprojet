@@ -2,9 +2,27 @@ const db = require("../config/conndb");
 
 class Note {
   // Récupérer toutes les notes
-  static async getAll() {
+  static async getByNumEt(numEt) {
     return new Promise((resolve, reject) => {
-      db.query("SELECT * FROM note", (err, results) => {
+      const sql = `
+        SELECT 
+            etudiant.num_et,
+            etudiant.nom_et,
+            etudiant.prenom_et,
+            IFNULL(note.note, 'Aucune note') AS note,
+            matiere.design
+        FROM 
+            etudiant
+        CROSS JOIN 
+            matiere
+        LEFT JOIN 
+            note ON note.id_et = etudiant.id_et AND note.num_mat = matiere.num_mat
+        WHERE 
+            etudiant.num_et = ?;
+
+      `;
+
+      db.query(sql, [numEt], (err, results) => {
         if (err) reject(err);
         else resolve(results);
       });

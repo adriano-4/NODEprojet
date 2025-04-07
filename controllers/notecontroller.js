@@ -1,9 +1,10 @@
 const Note = require("../models/noteModel");
 
 // Récupérer toutes les notes
-exports.getAllNotes = async (req, res) => {
+exports.getNotesByNumEt = async (req, res) => {
   try {
-    const notes = await Note.getAll();
+    const numEt = req.params.numEt;
+    const notes = await Note.getByNumEt(numEt);
     res.json(notes);
   } catch (error) {
     res.status(500).json({ error: error.message });
